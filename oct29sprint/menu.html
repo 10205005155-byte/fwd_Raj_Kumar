@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Menu | Druk Brew Café</title>
+		<meta name="description" content="Coffee, tea, food and desserts at Druk Brew Café, Mongar." />
+		<link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-brown z-3" href="#main">Skip to content</a>
+
+		<nav class="navbar navbar-expand-lg sticky-top border-bottom site-nav" aria-label="Main navigation">
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+					<img src="images/logo.svg" alt="" class="brand-mark" />
+					<span class="brand-name">Druk <span>Brew</span></span>
+				</a>
+				<button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav mx-auto py-3 py-lg-0">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="reservation.html">Reserve</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+					</ul>
+					<a class="btn btn-brand rounded-pill px-4 mb-3 mb-lg-0" href="reservation.html"><i class="bi bi-calendar-check me-1"></i> Book a table</a>
+				</div>
+			</div>
+		</nav>
+
+		<main id="main">
+			<header class="page-header">
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb mb-2">
+							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Menu</li>
+						</ol>
+					</nav>
+					<h1 class="display-5 fw-bold mb-2">Our menu</h1>
+					<p class="lead mb-0 opacity-75">Made fresh every day. Prices include tax.</p>
+				</div>
+			</header>
+
+			<section class="py-5 bg-cream">
+				<div class="container">
+					<div class="d-flex flex-wrap justify-content-center gap-2 mb-5" data-filter-group="#menuGrid" role="group" aria-label="Filter menu">
+						<button type="button" class="filter-pill active" data-filter="all" aria-pressed="true">All</button>
+						<button type="button" class="filter-pill" data-filter="coffee" aria-pressed="false"><i class="bi bi-cup-hot me-1"></i>Coffee</button>
+						<button type="button" class="filter-pill" data-filter="tea" aria-pressed="false"><i class="bi bi-cup-straw me-1"></i>Tea</button>
+						<button type="button" class="filter-pill" data-filter="food" aria-pressed="false"><i class="bi bi-egg-fried me-1"></i>Food</button>
+						<button type="button" class="filter-pill" data-filter="sweet" aria-pressed="false"><i class="bi bi-cake2 me-1"></i>Desserts</button>
+					</div>
+
+					<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="menuGrid">
+						<div class="col" data-category="coffee">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-coffee"><i class="bi bi-cup-hot"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Espresso</h3><span class="price">Nu. 90</span></div>
+									<p class="small text-body-secondary mb-0">Strong single shot, rich crema.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="coffee">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-coffee"><i class="bi bi-cup-hot"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Cappuccino</h3><span class="price">Nu. 150</span></div>
+									<p class="small text-body-secondary mb-0">Double shot with silky milk foam.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="coffee">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-coffee"><i class="bi bi-cup-hot"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Café latte</h3><span class="price">Nu. 160</span></div>
+									<p class="small text-body-secondary mb-0">Smooth espresso with lots of milk.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="coffee">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-coffee"><i class="bi bi-cup-straw"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Iced mocha</h3><span class="price">Nu. 180</span></div>
+									<p class="small text-body-secondary mb-0">Chocolate, espresso and cold milk.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="tea">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-tea"><i class="bi bi-cup-straw"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Suja</h3><span class="price">Nu. 60</span></div>
+									<p class="small text-body-secondary mb-0">Traditional butter tea, salty and warm.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="tea">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-tea"><i class="bi bi-cup-straw"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Masala chai</h3><span class="price">Nu. 70</span></div>
+									<p class="small text-body-secondary mb-0">Spiced milk tea brewed slowly.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="tea">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-tea"><i class="bi bi-cup-straw"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Lemon ginger honey</h3><span class="price">Nu. 90</span></div>
+									<p class="small text-body-secondary mb-0">Fresh ginger, lemon and wild honey.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="food">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-food"><i class="bi bi-egg-fried"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Cheese momo</h3><span class="price">Nu. 120</span></div>
+									<p class="small text-body-secondary mb-0">Ten steamed dumplings with ezay.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="food">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-food"><i class="bi bi-egg-fried"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Ema datshi bowl</h3><span class="price">Nu. 180</span></div>
+									<p class="small text-body-secondary mb-0">Chilli and cheese with red rice.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="food">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-food"><i class="bi bi-egg-fried"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Thukpa</h3><span class="price">Nu. 140</span></div>
+									<p class="small text-body-secondary mb-0">Hot noodle soup with vegetables.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="food">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-food"><i class="bi bi-egg-fried"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Club sandwich</h3><span class="price">Nu. 160</span></div>
+									<p class="small text-body-secondary mb-0">Toasted, with egg, cheese and salad.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="sweet">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-sweet"><i class="bi bi-cake2"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Honey cake</h3><span class="price">Nu. 110</span></div>
+									<p class="small text-body-secondary mb-0">Soft layers with local wild honey.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="sweet">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-sweet"><i class="bi bi-cake2"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Brownie</h3><span class="price">Nu. 100</span></div>
+									<p class="small text-body-secondary mb-0">Warm chocolate brownie.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col" data-category="sweet">
+							<div class="menu-card">
+								<div class="menu-thumb thumb-sweet"><i class="bi bi-cake2"></i></div>
+								<div class="p-3">
+									<div class="d-flex justify-content-between gap-2"><h3 class="h6 fw-bold mb-1">Fruit yoghurt</h3><span class="price">Nu. 90</span></div>
+									<p class="small text-body-secondary mb-0">Seasonal fruit with honey.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="py-5">
+				<div class="container">
+					<div class="row g-4 align-items-center">
+						<div class="col-lg-7">
+							<span class="eyebrow">Good to know</span>
+							<h2 class="fw-bold mt-1">Allergies &amp; special requests</h2>
+							<p class="text-body-secondary mb-0">Most dishes can be made without cheese or chilli. Tell us about allergies when you reserve and the kitchen will prepare your food separately.</p>
+						</div>
+						<div class="col-lg-5 text-lg-end">
+							<a href="reservation.html" class="btn btn-brand btn-lg rounded-pill px-4">Reserve &amp; pre-order</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-lg-4">
+						<a class="d-flex align-items-center gap-2 mb-3" href="index.html"><img src="images/logo.svg" alt="" width="40" height="40" /><span class="brand-name text-white">Druk Brew</span></a>
+						<p>Coffee, tea and homemade food in the heart of Mongar.</p>
+					</div>
+					<div class="col-6 col-lg-2 offset-lg-1">
+						<h2 class="mb-3">Explore</h2>
+						<ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="contact.html">Contact</a></li></ul>
+					</div>
+					<div class="col-6 col-lg-2">
+						<h2 class="mb-3">Visit</h2>
+						<ul><li><a href="reservation.html">Book a table</a></li><li><a href="menu.html#menuGrid">Today's menu</a></li></ul>
+					</div>
+					<div class="col-lg-3">
+						<h2 class="mb-3">Get in touch</h2>
+						<ul>
+							<li><i class="bi bi-envelope me-2"></i><a href="mailto:hello@example.com">hello@example.com</a></li>
+							<li><i class="bi bi-telephone me-2"></i><a href="tel:+97517000000">+975 17000000</a></li>
+							<li><i class="bi bi-geo-alt me-2"></i>Town centre, Mongar</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+					<span>&copy; <span data-year>2026</span> Druk Brew Café. All rights reserved.</span>
+					<span>Oct 29 Sprint · RK Mongar</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

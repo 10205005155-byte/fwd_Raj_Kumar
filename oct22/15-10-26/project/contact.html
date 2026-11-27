@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact PocketPlan with questions, feedback, or ideas for a better student expenses tracker.">
+    <title>Contact — PocketPlan</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="PocketPlan home"><span class="brand-mark" aria-hidden="true">p</span><span>pocketplan</span><span class="brand-period">.</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="primary-nav">
+          <a href="index.html">Home</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a class="active" href="contact.html" aria-current="page">Contact</a>
+          <a class="nav-cta" href="#contact-form">Send a message <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div class="content-wrap">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> QUESTIONS, IDEAS, FEEDBACK</p><h1>We’re here<br><em>to help.</em></h1></div>
+          <p class="page-intro-copy">Have an idea to make student budgeting easier? Found something confusing? Send a note — we’d love to hear from you.</p>
+        </div>
+      </section>
+
+      <section class="contact-section content-wrap">
+        <div class="contact-layout">
+          <div class="contact-heading">
+            <p class="section-kicker">A REAL PERSON WILL READ THIS</p>
+            <h2>Drop us<br>a <em>line.</em></h2>
+            <p>We’re building PocketPlan to make student money feel less overwhelming. Your questions and feedback help us make it better.</p>
+            <a class="contact-detail" href="mailto:hello@pocketplan.student">hello@pocketplan.student</a>
+            <p class="contact-small">Usually reply within two working days.</p>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="How should we address you?" required></div>
+            <div class="form-field"><label for="email">Student email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+            <div class="form-field form-field-full">
+              <label for="topic">What’s this about?</label>
+              <select id="topic" name="topic" required>
+                <option value="" selected disabled>Choose a topic</option>
+                <option>Question about budgeting</option>
+                <option>Feature idea</option>
+                <option>Feedback or something is not working</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="form-field form-field-full"><label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell us what’s on your mind..." required></textarea></div>
+            <p class="form-note">This demo form does not send or store your information. You can email us directly at hello@pocketplan.student.</p>
+            <button class="button button-dark" type="submit">Send your note <span aria-hidden="true">↗</span></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">p</span><span>pocketplan</span><span class="brand-period">.</span></a><p>More clarity for your cash.<br>Made for student life.</p></div>
+        <div class="footer-nav"><span class="footer-label">TAKE A LOOK</span><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Contact</a></div>
+        <div class="footer-contact"><span class="footer-label">GET IN TOUCH</span><a href="mailto:hello@pocketplan.student">hello@pocketplan.student</a><span>Here to help you feel in control.</span></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> PocketPlan</span><span>Made for your next chapter <span class="footer-star">✳</span></span></div>
+    </footer>
+  </body>
+</html>

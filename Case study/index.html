@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>TrackMe | Personal tracking dashboard</title>
+		<meta name="description" content="Track daily habits, spending, workouts, study and sleep in one simple dashboard." />
+		<link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body data-page="home">
+		<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-brand z-3" href="#main">Skip to content</a>
+
+		<nav class="navbar navbar-expand-md sticky-top site-nav" aria-label="Main navigation">
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+					<img src="images/logo.svg" alt="" width="36" height="36" />
+					<span class="brand-name">Track<span>Me</span></span>
+				</a>
+				<button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto gap-md-1 py-2 py-md-0">
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-grid-1x2 me-1"></i>Dashboard</a></li>
+						<li class="nav-item"><a class="nav-link" href="log.html"><i class="bi bi-list-check me-1"></i>Log</a></li>
+						<li class="nav-item"><a class="nav-link" href="goals.html"><i class="bi bi-trophy me-1"></i>Goals</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-chat-dots me-1"></i>Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main id="main">
+			<header class="page-head">
+				<div class="container">
+					<p class="mb-1 small text-uppercase fw-semibold" id="todayLabel">Today</p>
+					<h1 class="fw-bold mb-2">Kuzuzangpo! Here's your day.</h1>
+					<p class="mb-0">Tick off habits, log what you spend and see your week at a glance.</p>
+				</div>
+			</header>
+
+			<div class="container page-body">
+				<!-- Stats -->
+				<div class="row row-cols-2 row-cols-lg-4 g-3 mb-4">
+					<div class="col">
+						<div class="stat-card">
+							<span class="entry-icon amber"><i class="bi bi-wallet2"></i></span>
+							<div><div class="small text-secondary">Spent today</div><div class="stat-value" id="statSpentToday">–</div></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="stat-card">
+							<span class="entry-icon green"><i class="bi bi-activity"></i></span>
+							<div><div class="small text-secondary">Workout · 7 days</div><div class="stat-value" id="statWorkout">–</div></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="stat-card">
+							<span class="entry-icon violet"><i class="bi bi-book"></i></span>
+							<div><div class="small text-secondary">Study · 7 days</div><div class="stat-value" id="statStudy">–</div></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="stat-card">
+							<span class="entry-icon rose"><i class="bi bi-fire"></i></span>
+							<div><div class="small text-secondary">Habit streak</div><div class="stat-value" id="statStreak">–</div></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-4">
+					<!-- Habits -->
+					<div class="col-lg-5">
+						<section class="panel h-100" aria-labelledby="habitsTitle">
+							<div class="d-flex justify-content-between align-items-center mb-2">
+								<h2 class="h5 fw-bold mb-0" id="habitsTitle">Today's habits</h2>
+								<span class="small fw-semibold text-secondary" id="habitProgress"></span>
+							</div>
+							<div class="progress mb-3" role="progressbar" aria-label="Habits done today" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+								<div class="progress-bar" id="habitBar" style="width: 0%"></div>
+							</div>
+							<ul class="habit-list" id="habitList"></ul>
+						</section>
+					</div>
+
+					<!-- Chart + quick add -->
+					<div class="col-lg-7">
+						<section class="panel mb-4" aria-labelledby="chartTitle">
+							<div class="d-flex justify-content-between align-items-center mb-3">
+								<h2 class="h5 fw-bold mb-0" id="chartTitle">Spending this week</h2>
+								<span class="fw-bold" id="weekTotal"></span>
+							</div>
+							<div class="week-chart" id="weekChart"></div>
+						</section>
+
+						<section class="panel" aria-labelledby="quickTitle">
+							<h2 class="h5 fw-bold mb-3" id="quickTitle">Quick add for today</h2>
+							<form class="row g-2" id="quickAdd" novalidate>
+								<div class="col-sm-4">
+									<label class="visually-hidden" for="qaCategory">Category</label>
+									<select class="form-select" id="qaCategory" name="category"></select>
+								</div>
+								<div class="col-sm-4">
+									<label class="visually-hidden" for="qaTitle">What</label>
+									<input class="form-control" id="qaTitle" name="title" placeholder="e.g. Momos" required maxlength="60" />
+								</div>
+								<div class="col-7 col-sm-2">
+									<label class="visually-hidden" for="qaAmount">Amount</label>
+									<input class="form-control" id="qaAmount" name="amount" type="number" min="0.1" step="any" placeholder="Amount" required />
+								</div>
+								<div class="col-5 col-sm-2 d-grid">
+									<button class="btn btn-brand" type="submit"><i class="bi bi-plus-lg"></i> Add</button>
+								</div>
+							</form>
+						</section>
+					</div>
+
+					<!-- Recent -->
+					<div class="col-12">
+						<section class="panel" aria-labelledby="recentTitle">
+							<div class="d-flex justify-content-between align-items-center mb-1">
+								<h2 class="h5 fw-bold mb-0" id="recentTitle">Recent entries</h2>
+								<a href="log.html" class="btn btn-soft btn-sm">View all <i class="bi bi-arrow-right"></i></a>
+							</div>
+							<ul class="entry-list" id="recentList"></ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+				<span>&copy; <span data-year>2026</span> TrackMe · Case study by RK Mongar</span>
+				<span class="d-flex gap-3"><a href="log.html">Log</a><a href="goals.html">Goals</a><a href="contact.html">Contact</a></span>
+			</div>
+		</footer>
+
+		<div class="toast-container position-fixed bottom-0 end-0 p-3">
+			<div id="toast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite">
+				<div class="d-flex"><div class="toast-body"></div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/data.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

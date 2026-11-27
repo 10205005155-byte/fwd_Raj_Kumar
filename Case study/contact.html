@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Contact | TrackMe</title>
+		<meta name="description" content="Send feedback or questions about TrackMe." />
+		<link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body data-page="contact">
+		<a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 btn btn-brand z-3" href="#main">Skip to content</a>
+
+		<nav class="navbar navbar-expand-md sticky-top site-nav" aria-label="Main navigation">
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+					<img src="images/logo.svg" alt="" width="36" height="36" />
+					<span class="brand-name">Track<span>Me</span></span>
+				</a>
+				<button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto gap-md-1 py-2 py-md-0">
+						<li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-grid-1x2 me-1"></i>Dashboard</a></li>
+						<li class="nav-item"><a class="nav-link" href="log.html"><i class="bi bi-list-check me-1"></i>Log</a></li>
+						<li class="nav-item"><a class="nav-link" href="goals.html"><i class="bi bi-trophy me-1"></i>Goals</a></li>
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html"><i class="bi bi-chat-dots me-1"></i>Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main id="main">
+			<header class="page-head">
+				<div class="container">
+					<h1 class="fw-bold mb-2">Contact</h1>
+					<p class="mb-0">Found a bug or have an idea for a new tracker? Let me know.</p>
+				</div>
+			</header>
+
+			<div class="container page-body">
+				<div class="row g-4">
+					<div class="col-lg-4">
+						<section class="panel" aria-labelledby="infoTitle">
+							<h2 class="h5 fw-bold mb-2" id="infoTitle">Get in touch</h2>
+							<div class="info-row">
+								<span class="entry-icon violet"><i class="bi bi-envelope"></i></span>
+								<div><div class="fw-semibold">Email</div><a href="mailto:hello@example.com">hello@example.com</a></div>
+							</div>
+							<div class="info-row">
+								<span class="entry-icon green"><i class="bi bi-telephone"></i></span>
+								<div><div class="fw-semibold">Phone</div><a href="tel:+97517000000">+975 17000000</a></div>
+							</div>
+							<div class="info-row">
+								<span class="entry-icon amber"><i class="bi bi-geo-alt"></i></span>
+								<div><div class="fw-semibold">Location</div><span class="text-secondary">Mongar, Bhutan</span></div>
+							</div>
+							<div class="info-row">
+								<span class="entry-icon cyan"><i class="bi bi-shield-lock"></i></span>
+								<div><div class="fw-semibold">Your data</div><span class="small text-secondary">TrackMe saves everything in your own browser. Nothing is sent to a server.</span></div>
+							</div>
+						</section>
+					</div>
+
+					<div class="col-lg-8">
+						<section class="panel" aria-labelledby="formTitle">
+							<h2 class="h5 fw-bold mb-3" id="formTitle">Send a message</h2>
+							<div class="alert alert-success d-none" id="contactSuccess" role="status">
+								<i class="bi bi-check-circle me-1"></i> Thanks! Your message has been sent.
+							</div>
+							<form id="contactForm" novalidate>
+								<div class="row g-3">
+									<div class="col-md-6">
+										<label class="form-label" for="ctName">Name</label>
+										<input class="form-control" id="ctName" name="name" autocomplete="name" required />
+										<div class="invalid-feedback">Please enter your name.</div>
+									</div>
+									<div class="col-md-6">
+										<label class="form-label" for="ctEmail">Email</label>
+										<input class="form-control" id="ctEmail" name="email" type="email" autocomplete="email" required />
+										<div class="invalid-feedback">Please enter a valid email.</div>
+									</div>
+									<div class="col-12">
+										<label class="form-label" for="ctTopic">Topic</label>
+										<select class="form-select" id="ctTopic" name="topic">
+											<option>Feedback</option>
+											<option>Bug report</option>
+											<option>Feature idea</option>
+										</select>
+									</div>
+									<div class="col-12">
+										<label class="form-label" for="ctMessage">Message</label>
+										<textarea class="form-control" id="ctMessage" name="message" rows="5" required minlength="10"></textarea>
+										<div class="invalid-feedback">Write at least 10 characters.</div>
+									</div>
+									<div class="col-12">
+										<button class="btn btn-brand px-4" type="submit"><i class="bi bi-send me-1"></i> Send message</button>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+				<span>&copy; <span data-year>2026</span> TrackMe · Case study by RK Mongar</span>
+				<span class="d-flex gap-3"><a href="index.html">Dashboard</a><a href="log.html">Log</a><a href="goals.html">Goals</a></span>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/data.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

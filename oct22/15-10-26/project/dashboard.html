@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A sample student spending dashboard with monthly budget, category cards, and recent expenses.">
+    <title>Student Dashboard — PocketPlan</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="PocketPlan home"><span class="brand-mark" aria-hidden="true">p</span><span>pocketplan</span><span class="brand-period">.</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="primary-nav">
+          <a href="index.html">Home</a>
+          <a class="active" href="dashboard.html" aria-current="page">Dashboard</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-cta" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro dashboard-intro">
+        <div class="content-wrap">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> YOUR MONEY AT A GLANCE</p>
+            <h1>Hey, student.<br><em>You’ve got this.</em></h1>
+          </div>
+          <p class="page-intro-copy">A sample monthly snapshot to help you keep track of the essentials and leave room for the good stuff.</p>
+        </div>
+      </section>
+
+      <section class="dashboard-section content-wrap">
+        <div class="dashboard-topline">
+          <div><p class="section-kicker">MONTHLY OVERVIEW</p><h2>October <em>2026</em></h2></div>
+          <a class="button button-dark" href="contact.html">Ask us a question <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="summary-grid">
+          <article class="summary-card summary-primary"><span>AVAILABLE THIS MONTH</span><strong>nu:20,000</strong><small>nu:50,000 monthly budget</small><div class="budget-track"><span style="width: 79%"></span></div><small>79% of your budget used</small></article>
+          <article class="summary-card"><span>SPENT SO FAR</span><strong>nu:10,000</strong><small>Across 32 transactions</small><span class="summary-icon" aria-hidden="true">↘</span></article>
+          <article class="summary-card"><span>SAVINGS GOAL</span><strong>nu:11,000<small class="goal-total">
+          </small></strong><small>You’re 40% of the way there</small><span class="summary-icon" aria-hidden="true">✳</span></article>
+        </div>
+      </section>
+
+      <section class="spending-section">
+        <div class="content-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">A LITTLE LOOK AT THE DETAILS</p><h2>Where it <em>goes.</em></h2></div>
+          </div>
+          <div class="spending-grid">
+            <article class="spending-card">
+              <span class="spending-symbol" aria-hidden="true">⌂</span><div class="spending-card-head"><h3>Rent & bills</h3><span>nu:5000</span></div><p>Of $600 planned</p><div class="budget-track"><span style="width: 87%"></span></div>
+            </article>
+            <article class="spending-card">
+              <span class="spending-symbol" aria-hidden="true">＋</span><div class="spending-card-head"><h3>Food & groceries</h3><span>nu:400</span></div><p>Of $300 planned</p><div class="budget-track"><span style="width: 73%"></span></div>
+            </article>
+            <article class="spending-card">
+              <span class="spending-symbol" aria-hidden="true">✎</span><div class="spending-card-head"><h3>Study supplies</h3><span>nu:300</span></div><p>Of $120 planned</p><div class="budget-track"><span style="width: 70%"></span></div>
+            </article>
+            <article class="spending-card">
+              <span class="spending-symbol" aria-hidden="true">☆</span><div class="spending-card-head"><h3>Fun & social</h3><span>nu:150</span></div><p>Of $180 planned</p><div class="budget-track"><span style="width: 72%"></span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="activity-section content-wrap">
+        <div class="activity-heading"><div><p class="section-kicker">RECENT ACTIVITY</p><h2>Little things <em>add up.</em></h2></div><span class="activity-month">OCTOBER</span></div>
+        <div class="transaction-list">
+          <div class="transaction-row"><span class="transaction-icon">☕</span><span class="transaction-name"><strong>Campus café</strong><small>Food & drink · Today</small></span><span class="transaction-amount">−$6.50</span></div>
+          <div class="transaction-row"><span class="transaction-icon">📚</span><span class="transaction-name"><strong>Course reader</strong><small>Study supplies · Yesterday</small></span><span class="transaction-amount">−$24.00</span></div>
+          <div class="transaction-row"><span class="transaction-icon">🚌</span><span class="transaction-name"><strong>Student transit pass</strong><small>Transport · Oct 25</small></span><span class="transaction-amount">−$32.00</span></div>
+        </div>
+      </section>
+
+      <section class="faq-section content-wrap budget-tips">
+        <div class="faq-heading"><p class="section-kicker">A FEW FRIENDLY REMINDERS</p><h2>Budgeting, <em>without the stress.</em></h2></div>
+        <div class="faq-list">
+          <details><summary>How do I start a student budget?</summary><p>Start with money coming in, then list essentials like rent, food, and transport. Set aside a little for flexible spending and adjust as you learn what works.</p></details>
+          <details><summary>What if my spending changes every month?</summary><p>That’s normal. Use a flexible estimate, check in weekly, and revise next month’s plan. A budget is a guide, not a test.</p></details>
+          <details><summary>Is this dashboard connected to my bank?</summary><p>No. These are sample figures for a student budget demo, not live financial data or financial advice.</p></details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">p</span><span>pocketplan</span><span class="brand-period">.</span></a><p>More clarity for your cash.<br>Made for student life.</p></div>
+        <div class="footer-nav"><span class="footer-label">TAKE A LOOK</span><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Contact</a></div>
+        <div class="footer-contact"><span class="footer-label">GET IN TOUCH</span><a href="mailto:hello@pocketplan.student">hello@pocketplan.student</a><span>Here to help you feel in control.</span></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> PocketPlan</span><span>Made for your next chapter <span class="footer-star">✳</span></span></div>
+    </footer>
+  </body>
+</html>
